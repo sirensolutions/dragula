@@ -73,7 +73,6 @@ function dragula (initialContainers, options) {
 
   function grabDelayMovements (remove, e) {
     var op = remove ? 'remove' : 'add';
-    touchy(documentElement, op, 'mousemove', cancelGrabDelay);
 
     clearGrabDelayTimer();
 
