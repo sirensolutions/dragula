@@ -72,9 +72,6 @@ function dragula (initialContainers, options) {
   }
 
   function grabDelayMovements (remove, e) {
-    var op = remove ? 'remove' : 'add';
-    touchy(documentElement, op, 'mousemove', cancelGrabDelay);
-
     clearGrabDelayTimer();
 
     if (!remove) {
@@ -134,10 +131,6 @@ function dragula (initialContainers, options) {
         e.preventDefault(); // fixes https://github.com/bevacqua/dragula/issues/155
       }
     }
-  }
-
-  function cancelGrabDelay () {
-    grabDelayMovements(true);
   }
 
   function startBecauseMouseMoved (e) {
